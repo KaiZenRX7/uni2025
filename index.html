@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Imágenes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carousel-container {
+            width: 80%; /* Ajusta el porcentaje según el tamaño que desees */
+            max-width: 800px; /* Máximo ancho */
+            margin: 50px auto; /* Centrado con margen superior */
+            overflow: hidden; /* Elimina los desbordes si el tamaño no es adecuado */
+        }
+
+        .carousel-item {
+            position: relative;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            padding: 10px;
+            border-radius: 5px;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor para el carrusel con espacio limitado -->
+    <div class="carousel-container">
+        <div id="carouselEjemplo" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselEjemplo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
+                <button type="button" data-bs-target="#carouselEjemplo" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+                <button type="button" data-bs-target="#carouselEjemplo" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://bucket-clase-jueves-kai.s3.us-east-1.amazonaws.com/60225-metal-gear-solid-3-subsistence-playstation-2_umwf.jpg" class="d-block w-100" alt="Imagen 1">
+                    <div class="carousel-caption">
+                        <h5>Metal Gear Solid 3</h5>
+                        <p>Un clásico de PlayStation 2, ¡la aventura comienza aquí!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://bucket-clase-jueves-kai.s3.us-east-1.amazonaws.com/free-shipping-custom-poster-nice-bedroom-decor-fas_9w8p.jpg" class="d-block w-100" alt="Imagen 2">
+                    <div class="carousel-caption">
+                        <h5>Decoración de habitación</h5>
+                        <p>Transforma tu espacio con este increíble poster decorativo.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://bucket-clase-jueves-kai.s3.us-east-1.amazonaws.com/grand_theft_auto_san_andreas-3785649.jpg" class="d-block w-100" alt="Imagen 3">
+                    <div class="carousel-caption">
+                        <h5>Grand Theft Auto: San Andreas</h5>
+                        <p>Uno de los videojuegos más emblemáticos de la historia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEjemplo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselEjemplo" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
